@@ -1,0 +1,8 @@
+<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Speaker base (filled rounded shape) -->
+  <path d="M5 9.5V14.5H8.5L13 18V6L8.5 9.5H5Z" fill="#000000"/>
+  
+  <!-- Sound waves (modernized curves) -->
+  <path d="M16 8C16.6667 9 17 10.3333 17 12C17 13.6667 16.6667 15 16 16" stroke="#000000" stroke-width="1.5" stroke-linecap="round"/>
+  <path d="M19 6C20.3333 7.66667 21 9.66667 21 12C21 14.3333 20.3333 16.3333 19 18" stroke="#000000" stroke-width="1.5" stroke-linecap="round"/>
+</svg>

@@ -1,2 +1,2 @@
 # Reso
-Gesture Control Music Player
+Music Player

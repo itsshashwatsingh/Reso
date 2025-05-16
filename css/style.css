@@ -126,7 +126,7 @@ body{
     width: 1.7rem;
     padding: 0;
   }
-  .header{
+  .navbar{
     display: flex;
     justify-content: space-between;
     background-color: rgba(29, 28, 28, 0.775);
@@ -137,7 +137,7 @@ body{
     z-index: 20;
 }
 
-  .header > *{
+  .navbar > *{
     padding: 7px;
 
   }
@@ -381,9 +381,9 @@ body{
   font-weight: 600;
   font-size: 1rem;
   text-shadow: 0 0 10px rgba(255, 255, 255, 0.4);
-  letter-spacing: 0.5px;
-  white-space: nowrap;
-  text-overflow: ellipsis;
+    white-space: normal;
+  word-wrap: break-word;     /* legacy support */
+  overflow-wrap: break-word;
 }
 
 .songtime {
@@ -625,7 +625,7 @@ body{
       width: 100vw;
     }
 
-    .header{
+    .navbar{
       width: 100vw;
      
     }
@@ -692,6 +692,9 @@ body{
     .volume-slider{
       height: 110px;
     }
+    .barcontent{
+      bottom: 45px;
+    }
     
 
 
@@ -701,7 +704,7 @@ body{
 
 @media (max-width: 470px) {
 
-  .header {
+  .navbar {
     display: flex;
     align-items: center;
     gap: 10px; /* spacing between elements */
@@ -712,7 +715,7 @@ body{
    
   }
 
-  .header .buttons {
+  .navbar .buttons {
     display: flex;
     
     justify-content: center;
@@ -720,13 +723,13 @@ body{
     flex: 1; /* allow it to take available space */
   }
 
-  .header .buttons button {
+  .navbar .buttons button {
     flex: 1 1 auto;
     min-width: 100px; /* or whatever suits the layout */
 
   }
 
-.header .buttons .loginbtn{
+.navbar .buttons .loginbtn{
   position: relative;
   right: 15px;
 }
@@ -747,7 +750,7 @@ body{
   
 }
 .player-container{
-  right: 2px;
+  right: 7px;
   
 }
 .volume-slider{

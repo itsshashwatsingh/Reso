@@ -1,42 +1,41 @@
 # ResoMusic 🎵
 
-Live App: [resomusic.vercel.app](https://resomusic.vercel.app)
+[Live Demo 🚀](https://resomusic.vercel.app)
 
-ResoMusic is a sleek, modern music web application built entirely with JavaScript. Currently, it provides a seamless and responsive interface for playing and controlling your favorite audio tracks.
+ResoMusic is a clean and simple web-based music player built entirely using JavaScript. It currently supports basic playback functionality and offers a user-friendly interface for listening to your favorite tracks.
 
-## 🚀 Features (Current)
+🚧 Coming Soon: Gesture Controls  
+We're working on integrating gesture control using OpenCV and JavaScript, allowing users to control playback, volume, and navigation with hand gestures — no clicks needed!
 
-- 🎧 Play/Pause functionality
-- 🔊 Volume control
-- ⏭️ Track navigation (next/previous)
-- 📱 Responsive UI for desktop and mobile
-- 🧪 Built using HTML, CSS, and JavaScript
+## Features
 
-## 🤖 Upcoming Features
+- ✅ Responsive and modern UI
+- ✅ Play/Pause, Next, Previous controls
+- ✅ Track and progress bar
+- 🚀 Future: Gesture-based controls (via camera)
+- 🚀 Future: Volume control with hand gestures
+- 🚀 Future: Song switching with hand movements
 
-We are actively developing a gesture-controlled interface using OpenCV and JavaScript. Soon, you'll be able to:
+## Tech Stack
 
-- ✋ Pause or play music with a simple hand gesture
-- 👆 Swipe to skip tracks
-- 🤏 Pinch to control volume
-- 📸 Control everything hands-free with your webcam
+- HTML
+- CSS
+- JavaScript
+- OpenCV.js (planned for gesture controls)
 
-## 📦 Tech Stack
+## Getting Started
 
-- JavaScript (Vanilla)
-- HTML5 & CSS3
-- OpenCV.js (for future gesture support)
-- Deployed via Vercel
+To run the project locally:
 
-## 🛠️ Installation
-
-Clone the repository:
-
-```bash
-git clone https://github.com/yourusername/resomusic.git
-cd resomusic
+## ScreenShots
 
 <img src="Screenshot 2025-05-17 034432.png" width="700"> <img src="Screenshot 2025-05-17 034502.png" alt="My Screenshot" height="300"/> <img src="Screenshot 2025-05-17 034526.png" alt="My Screenshot" height="300"/> <img src="Screenshot 2025-05-17 034557.png" alt="My Screenshot" height="280"/> 
 <img src="Screenshot 2025-05-17 034631.png" alt="My Screenshot" height="300"/> <img src="Screenshot 2025-05-17 034752.png" alt="My Screenshot" height="300"/> 
 
+
+
+```bash
+git clone https://github.com/itsshashwatsingh/Reso.git
+cd Reso
+open index.html
 

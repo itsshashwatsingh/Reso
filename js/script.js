@@ -239,6 +239,21 @@ async function main() {
             }
         }
     })
+    document.querySelector(".volume-slider").addEventListener("change", (e) => {
+    currentSong.volume = parseInt(e.target.value) / 100;
+    const volumeBtn = document.querySelector(".volume-btn");
+    if (e.target.value == 0) {
+        // Change to mute icon
+        if (volumeBtn.src.includes("volume.svg")) {
+            volumeBtn.src = volumeBtn.src.replace("volume.svg", "mute.svg");
+        }
+    } else {
+        // Change to volume icon
+        if (volumeBtn.src.includes("mute.svg")) {
+            volumeBtn.src = volumeBtn.src.replace("mute.svg", "volume.svg");
+        }
+    }
+})
 }
 
 main()

@@ -18,6 +18,7 @@ function formatSeconds(inputSeconds) {
 }
 
 async function getsongs(folder) {
+       if (folder.startsWith("/")) folder = folder.slice(1);
     currfolder = folder;
     let a = await fetch(`http://127.0.0.1:5500/${folder}/`);
     let response = await a.text();
@@ -32,6 +33,7 @@ async function getsongs(folder) {
             songs.push(element.href.split(`/${folder}/`)[1]);
         }
     }
+    
 
     let songUL = document.querySelector(".songlist").getElementsByTagName("ul")[0]
     songUL.innerHTML = ""
@@ -97,7 +99,7 @@ async function DisplayAlbums() {
         if (e.href.includes("/songs/") && !e.href.endsWith("/songs/") && !e.href.endsWith("/songs")) {
             let folder = e.href.split("/").slice(-1)[0]
             // get meta data of the folder
-            let a = await fetch(`http://127.0.0.1:5500/songs/${folder}/info.json`);
+            let a = await fetch(`/songs/${folder}/info.json`);
             let response = await a.json();
             cardcontainer.innerHTML = cardcontainer.innerHTML + ` <div data-folder="${folder}" class="card">
                         <img src ="/songs/${folder}/cover.gif">

@@ -538,7 +538,6 @@ body{
   height: 90px;
   width: 6px;
   writing-mode: bt-lr;
-  -webkit-appearance: slider-vertical;
   opacity: 0;
   visibility: hidden;
   transition: opacity 0.3s ease, visibility 0.3s ease;

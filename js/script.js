@@ -18,9 +18,9 @@ function formatSeconds(inputSeconds) {
 }
 
 async function getsongs(folder) {
-       if (folder.startsWith("/")) folder = folder.slice(1);
+    if (folder.startsWith("/")) folder = folder.slice(1);
     currfolder = folder;
-    let a = await fetch(`http://127.0.0.1:5500/${folder}/`);
+    let a = await fetch(`/${folder}/`);
     let response = await a.text();
     let div = document.createElement("div");
     div.innerHTML = response;
@@ -33,7 +33,7 @@ async function getsongs(folder) {
             songs.push(element.href.split(`/${folder}/`)[1]);
         }
     }
-    
+
 
     let songUL = document.querySelector(".songlist").getElementsByTagName("ul")[0]
     songUL.innerHTML = ""
@@ -83,7 +83,7 @@ const playMusic = (track, pause = false) => {
 };
 
 async function DisplayAlbums() {
-    let a = await fetch(`http://127.0.0.1:5500/songs/`);
+    let a = await fetch(`/songs/`);
     let response = await a.text();
     let div = document.createElement("div");
     div.innerHTML = response;
@@ -102,7 +102,7 @@ async function DisplayAlbums() {
             let a = await fetch(`/songs/${folder}/info.json`);
             let response = await a.json();
             cardcontainer.innerHTML = cardcontainer.innerHTML + ` <div data-folder="${folder}" class="card">
-                        <img src ="/songs/${folder}/cover.gif">
+                        <img src="/songs/${folder}/cover.gif">
                    <div class="play">
                     <svg  width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <circle cx="24" cy="24" r="24" fill=" #af2896"/>
@@ -152,7 +152,7 @@ async function main() {
 
     playMusic(songs[0], true)
 
-   await DisplayAlbums()
+    await DisplayAlbums()
 
     const play = document.querySelector("#play");
 
@@ -242,20 +242,20 @@ async function main() {
         }
     })
     document.querySelector(".volume-slider").addEventListener("change", (e) => {
-    currentSong.volume = parseInt(e.target.value) / 100;
-    const volumeBtn = document.querySelector(".volume-btn");
-    if (e.target.value == 0) {
-        // Change to mute icon
-        if (volumeBtn.src.includes("volume.svg")) {
-            volumeBtn.src = volumeBtn.src.replace("volume.svg", "mute.svg");
+        currentSong.volume = parseInt(e.target.value) / 100;
+        const volumeBtn = document.querySelector(".volume-btn");
+        if (e.target.value == 0) {
+            // Change to mute icon
+            if (volumeBtn.src.includes("volume.svg")) {
+                volumeBtn.src = volumeBtn.src.replace("volume.svg", "mute.svg");
+            }
+        } else {
+            // Change to volume icon
+            if (volumeBtn.src.includes("mute.svg")) {
+                volumeBtn.src = volumeBtn.src.replace("mute.svg", "volume.svg");
+            }
         }
-    } else {
-        // Change to volume icon
-        if (volumeBtn.src.includes("mute.svg")) {
-            volumeBtn.src = volumeBtn.src.replace("mute.svg", "volume.svg");
-        }
-    }
-})
+    })
 }
 
 main()

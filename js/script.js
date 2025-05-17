@@ -38,14 +38,14 @@ async function getsongs(folder) {
 
     for (const song of songs) {
         songUL.innerHTML = songUL.innerHTML + `<li>
-            <img class="invert" src="img/music.svg" alt="">
+            <img class="invert" src="/img/music.svg" alt="">
             <div class="songinfo">
                 <div>${decodeURIComponent(song)}</div>
                 <div>harry</div>
             </div>
             <div class="playnow">
                 <span>Play Now</span> 
-                <img class="invert position" src="img/play.svg" alt="">
+                <img class="invert position" src="/img/play.svg" alt="">
             </div>
         </li>`;
     }
@@ -69,10 +69,10 @@ const playMusic = (track, pause = false) => {
 
     if (!pause) {
         currentSong.play();
-        play.src = "img/pause.svg";
+        play.src = "/img/pause.svg";
     } else {
         currentSong.pause();
-        play.src = "img/play.svg";
+        play.src = "/img/play.svg";
     }
 
     document.querySelector(".songinfo2").innerHTML = decodeURIComponent(track);
@@ -117,7 +117,7 @@ async function DisplayAlbums() {
 
     Array.from(document.getElementsByClassName("card")).forEach(e => {
         e.addEventListener("click", async item => {
-            songs = await getsongs(`songs/${item.currentTarget.dataset.folder}`);
+            songs = await getsongs(`/songs/${item.currentTarget.dataset.folder}`);
             playMusic(songs[0]);
         })
     })
@@ -146,7 +146,7 @@ function updateButtonStates(currentIndex) {
 
 async function main() {
     // get lists of all songs
-    await getsongs("songs/favorites");
+    await getsongs("/songs/favorites");
 
     playMusic(songs[0], true)
 
@@ -156,10 +156,10 @@ async function main() {
 
     play.addEventListener("click", () => {
         if (currentSong.paused) {
-            play.src = "img/pause.svg";  // switch icon to pause BEFORE playing
+            play.src = "/img/pause.svg";  // switch icon to pause BEFORE playing
             currentSong.play();
         } else {
-            play.src = "img/play.svg";   // switch icon to play BEFORE pausing
+            play.src = "/img/play.svg";   // switch icon to play BEFORE pausing
             currentSong.pause();
         }
     });

@@ -1,4 +1,4 @@
-
+# Reso
 
 ResoMusic is a clean and simple web-based music player built entirely using JavaScript. It currently supports basic playback functionality and offers a user-friendly interface for listening to your favorite tracks.
 

@@ -682,11 +682,11 @@ body{
 
     .seekbar{
       width: 92%;
-      top: 85px;
+      top: 70px;
     }
     .songtime{
       position: relative;
-      top:20px ;
+      top:30px ;
     }
     .volume-slider{
       height: 110px;

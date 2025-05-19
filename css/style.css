@@ -688,13 +688,13 @@ body{
     }
     .songtime{
       position: relative;
-      top:30px ;
+      top:40px ;
     }
     .volume-slider{
       height: 110px;
     }
     .barcontent{
-      bottom: 45px;
+      bottom: 55px;
     }
     
 

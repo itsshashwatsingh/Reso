@@ -453,7 +453,7 @@ body{
 }
 
 .seekbar {
-  height: 3px;
+  height: 7px;
   width: 95%;
   background-color: rgba(0, 0, 0, 0.5);
   position: relative;
@@ -463,11 +463,12 @@ body{
   left: 20px;
   cursor: pointer;
   overflow: visible;
+  z-index: 2;
 }
 
 .seekbar::before {
   content: '';
-  position: absolute;
+
   height: 100%;
   width: var(--seek-percent, 0%);
   background: rgba(255, 255, 255, 0.7);
@@ -600,7 +601,7 @@ body{
       position: absolute;
       left: -120%;
       transition: all 0.3s;
-      z-index: 2;
+      z-index: 3;
       width: 386px;
       background-color: black;
     }
@@ -683,7 +684,7 @@ body{
 
     .seekbar{
       width: 92%;
-      top: 70px;
+      top: 80px;
     }
     .songtime{
       position: relative;

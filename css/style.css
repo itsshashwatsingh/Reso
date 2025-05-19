@@ -482,7 +482,7 @@ body{
   border-radius: 50%;
   left: 0%;
   position: relative;
-  bottom: 7px;
+  bottom: 5px;
   transition: left 0.5s;
   box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
 }

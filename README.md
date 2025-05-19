@@ -4,7 +4,7 @@ ResoMusic is a clean and simple web-based music player built entirely using Java
 
 ## live demonstration
 
-[click here](resomusic.vercel.app)
+[Click here](resomusic.vercel.app)
 
 🚧 Coming Soon: Gesture Controls  
 We're working on integrating gesture control using OpenCV and JavaScript, allowing users to control playback, volume, and navigation with hand gestures — no clicks needed!

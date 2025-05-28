@@ -11,10 +11,7 @@ ResoMusic is a clean and simple web-based music player built entirely using Java
 - ✅ Responsive and modern UI
 - ✅ Play/Pause, Next, Previous controls
 - ✅ Track and progress bar
-- 🚀 Future: Gesture-based controls (via camera)
-- 🚀 Future: Volume control with hand gestures
-- 🚀 Future: Song switching with hand movements
-
+- ✅ Responsive playlist control
 ## Tech Stack
 
 - HTML
